@@ -156,6 +156,7 @@ Read the [NOTICE][] file distributed with this work for additional information r
 - [服务 (Service)](#服务-service)
     - [在线工具箱 (Online Toolbox)](#在线工具箱-online-toolbox)
     - [自部署的服务 (Self-Host Service)](#自部署的服务-self-host-service)
+    - [定时任务](#定时任务)
     - [WAF](#waf)
     - [短链接](#短链接)
     - [评论系统](#评论系统)
@@ -1111,6 +1112,10 @@ Read the [NOTICE][] file distributed with this work for additional information r
 - [webhook](https://github.com/adnanh/webhook): a lightweight incoming webhook server to run shell commands
 - [enclosed](https://github.com/CorentinTh/enclosed): 阅后即焚服务
 
+### 定时任务
+
+- [xyops](https://github.com/pixlcore/xyops): [Cronicle](https://github.com/jhuckaby/Cronicle) 的继任者。定时任务 + Workflow。Server + Agent 部署架构。部署简单。支持 Docker。功能丰富，界面友好。BSD-3 开源协议。
+
 ### WAF
 
 - [ModSecurity](https://github.com/owasp-modsecurity/ModSecurity): cross platform web application firewall (WAF) engine for Apache, IIS and Nginx. It has a robust event-based programming language which provides protection from a range of attacks against web applications and allows for HTTP traffic monitoring, logging and real-time analysis.
@@ -1306,8 +1311,10 @@ Read the [NOTICE][] file distributed with this work for additional information r
 
 ## 日志
 
-- [goaccess](https://github.com/allinurl/goaccess): GoAccess is a real-time web log analyzer and interactive viewer that runs in a terminal in *nix systems or through your browser.
-- [lnav](https://lnav.org/): 日志文件的终端浏览器
+- [hl](https://github.com/pamburus/hl): JSON 日志阅读器
+- [toolong](https://github.com/Textualize/toolong): 针对大文件日志的终端阅读器
+- [gonzo](https://github.com/control-theory/gonzo): 日志分析终端工具。加载大文件非常慢。
+- [goaccess](https://github.com/allinurl/goaccess): Web 日志分析终端工具
 
 ## 交互式 Notebook
 

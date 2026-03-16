@@ -48,6 +48,7 @@
 
 - ghcr.io -> ghcr.nju.edu.cn or ghcr.chenby.cn
 - docker.io -> docker.1ms.run
+- https://dockerproxy.link/
 - [CF-Workers-docker](https://github.com/cmliu/CF-Workers-docker.io): 用 cloudflare worker 自建 Docker Hub, K8S, GCR, GHCR, QUAY 代理。 **有封号风险，建议使用新账号和新域名创建。**
   - [Cloudflare-Accel](https://github.com/fscarmen2/Cloudflare-Accel): 备选方案
   - [ciiiii/cloudflare-docker-proxy](https://github.com/ciiiii/cloudflare-docker-proxy): 备选方案
@@ -109,5 +110,4 @@
 ## 可视化管理/UI
 
 - [Portainer](https://github.com/portainer/portainer): docker web dashboard。目前[不能完全支持 podman 和 nerdctl](https://github.com/orgs/portainer/discussions/9770)。
-- [Yacht](https://github.com/SelfhostedPro/Yacht): docker web dashboard
 - [lazydocker](https://github.com/jesseduffield/lazydocker): 管理 docker 的 TUI 工具

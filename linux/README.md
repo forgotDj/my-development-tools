@@ -15,6 +15,7 @@
 - [时间](#时间)
 - [文件系统](#文件系统)
 - [监控](#监控)
+    - [agent](#agent)
 - [运维](#运维)
 - [Troubleshooting](#troubleshooting)
 
@@ -95,12 +96,25 @@
 
 - [SigNoz](https://github.com/SigNoz/signoz): 基于 OpenTelemetry 标准的可观测平台。
 - [netdata](https://github.com/firehol/netdata): 实时监控，指标很全面，开箱即用。支持 Linux、MacOS、K8S、IoT。支持容器安装。缺点：需要登录它的云服务账号才能使用大部分功能。如果不担心隐私泄露，推荐使用。
-- [Prometheus](https://github.com/prometheus/prometheus): Metrics 存储、查询、监控报警，时序数据库。
-  - [thanos](https://github.com/improbable-eng/thanos): 让 Prometheus 高可用，以及存储可扩展的组件。
+- [Prometheus](https://github.com/prometheus/prometheus): Metrics 存储、查询、监控报警，时序数据库。单机存储和部署。
+  - [Mimir](https://github.com/grafana/mimir): Prometheus 的水平扩展方案。Grafana 官方维护。Prometheus 负责采集然后 Remote Write 到 Mimir。Mimir 负责存储和查询。
+    - [Thanos](https://github.com/improbable-eng/thanos): 备选方案
+  - [Awesome Prometheus Alerts](https://github.com/samber/awesome-prometheus-alerts)
+  - [node_exporter](https://github.com/prometheus/node_exporter): exporter for machine metrics
+    - [node_exporter dashboard](https://grafana.com/grafana/dashboards/1860-node-exporter-full/)
+  - [process-exporter](https://github.com/ncabatoff/process-exporter): exporter that mines /proc to report on selected processes
+    - [process-exporter dashboard](https://grafana.com/grafana/dashboards/715-named-processes-stacked/)
+  - [ping_exporter](https://github.com/czerwonk/ping_exporter): exporter for ICMP echo requests
+  - [kube-state-metrics](https://github.com/kubernetes/kube-state-metrics)
+  - [statsd_exporter](https://github.com/prometheus/statsd_exporter)
 - [statsd](https://github.com/etsy/statsd): Metrics 数据聚合
 - [pcp](https://github.com/performancecopilot/pcp): Performance Co-Pilot。系统性能监控
 - [uptime-kuma](https://github.com/louislam/uptime-kuma): 功能强大的可用性监控服务。
 - 终端工具请看 [Builtin Command Alternatives 的 better `top` 部分](./CLI/README.md#builtin-command-alternatives)
+
+### agent
+
+- [telegraf](https://github.com/influxdata/telegraf): Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.
 
 ## 运维
 

@@ -84,6 +84,7 @@
 - https://www.ipip.net/ : 国内老牌企业
 - https://cz88.net/ : 纯真 IP
 - https://www.ipplus360.com/ : 埃文科技
+- https://ipquery.io/ : 免费的 GeoIP API
 
 ## DNS
 

@@ -83,10 +83,10 @@
 - https://duangks.com/ : 很好用机场评测网站。提供节点分析、流媒体解锁分析、测速图。
 - https://guatizi.com/ : 很好用机场导航
 - [Paolujichang](https://github.com/limbopro/Paolujichang): 跑路机场名单收集
-- ~~[CyberGuard](https://www.cyberguard.best/#/register?code=Z0C5SDfY)~~: **不稳定，经常被攻击，全节点不可用。TG 全群禁言，疑似要跑路**。速度快，全节点 vless 协议，无审计，不限制客户端数量。站长不尊重用户体验。
+- ~~[CyberGuard](https://www.cyberguard.best/#/register?code=Z0C5SDfY)~~: 垃圾站，已跑路
 - [地鼠](http://nbvpn.top/#/register?code=GQUZz5wn): 有审计，不限制客户端数量，非常便宜，流量大，速度快。**需要客户端支持 anytls 协议**
 - [狗狗](https://down.dginv.click/#/register?code=I1DMSwIO): 无审计，不限制客户端数量，全节点 hy2 协议，不稳定
-- ~~[xfltd](https://xfltd.org/#/register?code=y8yKhElL)~~: 非常便宜，性价比高，提供不限时按量套餐，延迟有点高。不稳定，经常被人攻击。有审计名单，某些涉政网站无法访问。 **TG 全群禁言。订阅 token 变成只能用一次的。疑似要跑路**
+- ~~[xfltd](https://xfltd.org/#/register?code=y8yKhElL)~~: 非常便宜，性价比高，提供不限时按量套餐，延迟有点高。不稳定，经常被人攻击。有审计名单，某些涉政网站无法访问。 **TG 全群禁言。限制专用客户端才能使用**
 - [mitce](https://mitce.net/aff.php?aff=16869): 非常便宜，节点多，速度快，全节点 vless 和 hysteria2 协议。无审计。但是节点很不稳定。推荐用作备用梯子。 **机场容易被攻击**
 - [苏打云](https://v2.suda.moe/): 价格亲民。速度挺快。不稳定，在不能说的日子会必挂。
 - 免费机场，后果自负
