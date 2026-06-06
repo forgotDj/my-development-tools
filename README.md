@@ -68,8 +68,9 @@ Read the [NOTICE][] file distributed with this work for additional information r
 - [法律](#法律)
 - [数学](#数学)
 - [桌面应用开发](#桌面应用开发)
+- [Authentication](#authentication)
+- [IAM](#iam)
 - [Authorization](#authorization)
-    - [IAM](#iam)
 - [开源项目](#开源项目)
 - [Ansible](#ansible)
 - [Semver](#semver)
@@ -79,6 +80,8 @@ Read the [NOTICE][] file distributed with this work for additional information r
 - [SVG](#svg)
 - [代码质量检查](#代码质量检查)
 - [安全渗透](#安全渗透)
+    - [IPS/IDS](#ipsids)
+    - [网络威胁情报 CTI](#网络威胁情报-cti)
     - [蜜罐 Honeypot](#蜜罐-honeypot)
     - [密码](#密码)
     - [爆破字典](#爆破字典)
@@ -165,7 +168,7 @@ Read the [NOTICE][] file distributed with this work for additional information r
 - [临时共享](#临时共享)
 - [爬虫/Archive](#爬虫archive)
     - [爬虫代理池](#爬虫代理池)
-- [HTTP 静态文件服务](#http-静态文件服务)
+- [静态文件服务](#静态文件服务)
 - [文件管理服务](#文件管理服务)
 - [静态文件托管](#静态文件托管)
 - [CMS](#cms)
@@ -232,7 +235,8 @@ Read the [NOTICE][] file distributed with this work for additional information r
 - [游戏开发](#游戏开发)
 - [二维码](#二维码)
 - [FTP](#ftp)
-- [RSS](#rss)
+- [资讯/信息](#资讯信息)
+    - [RSS](#rss)
 - [别人的工具列表](#别人的工具列表)
 
 <!-- /MarkdownTOC -->
@@ -425,20 +429,26 @@ Read the [NOTICE][] file distributed with this work for additional information r
 - [electron](https://github.com/electron/electron): 用 Web 技术栈开发跨平台的桌面应用
 - [tauri](https://github.com/tauri-apps/tauri): 用 Web + Rust + JS 开发跨平台的桌面应用。Web 技术做窗口渲染，Rust 做后端引擎。linux 下使用 GTK + WebKitGTK，windows 使用 windows-rs + WebView2，MacOS 使用 AppKit + WKWebView。Android 和 iOS 的支持还在开发中。包大小、内存占用，都优于 electron。
 
-## Authorization
+## Authentication
 
-- [casbin](https://github.com/casbin/casbin): 一个类库。通过设计 PERM 模型来控制认证策略。支持 ACL, RBAC, ABAC 等策略。支持主流语言。
 - [2FAS](https://2fas.com/): 2FA 客户端，支持 iOS 和 Android。支持 TOTP 和 HOTP。用户体验好，功能丰富。开源。支持浏览器插件（同步需要翻墙）
 - KeePass 也支持 2FA
 - [otpauth](https://github.com/dim13/otpauth): 导出 Google Authenticator 里存储的数据
 
-### IAM
+## IAM
 
 - [zitadel](https://github.com/zitadel/zitadel): 商业公司使用注意：AGPL3-only 协议。
 - [hydra](https://github.com/ory/hydra): OpenID Connect and OAuth Provider written in Go
   - [dex](https://github.com/dexidp/dex): 备选方案
 - [authentik](https://github.com/goauthentik/authentik): 功能丰富但复杂，入门成本比较高。部署容易。UI 丑，但可以更换背景和 Logo，也可以自定义 CSS 来美化 UI。注意 license，不适合用在公司，适合个人使用。支持 nginx 和 traefik。缺点是 [domain-level forward auth 不支持权限控制](https://github.com/goauthentik/authentik/discussions/13823)。
 - [authelia](https://github.com/authelia/authelia): 轻量级。支持 nginx 和 traefik。缺点是 Identity Provider 只支持 OpenID Connect 1.0。
+- [Casdoor](https://github.com/casdoor/casdoor): An open-source Agent-first Identity and Access Management (IAM) /LLM MCP & agent gateway and auth server with web UI supporting OpenClaw, MCP, OAuth, OIDC, SAML, CAS, LDAP, SCIM, WebAuthn, TOTP, MFA, Face ID, Google Workspace, Azure AD
+
+## Authorization
+
+- [Open Policy Agent](https://github.com/open-policy-agent/opa): general-purpose policy engine
+- [casbin](https://github.com/casbin/casbin): 一个类库。通过设计 PERM 模型来控制认证策略。支持 ACL, RBAC, ABAC 等策略。支持主流语言。
+- [kyverno](https://github.com/kyverno/kyverno): Kubernetes-native policy engine
 
 ## 开源项目
 
@@ -498,11 +508,25 @@ Read the [NOTICE][] file distributed with this work for additional information r
 - [Snyk](https://snyk.io/): 开源风险收集检测服务。提供 API 和 CLI 做检查。
 - [Scanners-Box](https://github.com/We5ter/Scanners-Box): 安全行业从业者自研开源扫描器合辑
 - [falco](https://github.com/falcosecurity/falco): 「待评价」intrusion and abnormality detection for Cloud Native platforms such as Kubernetes, Mesosphere, and Cloud Foundry. Detect abnormal application behavior.
-- [fail2ban](https://github.com/fail2ban/fail2ban): 入侵防御软件
 - [nmap](https://github.com/nmap/nmap): 网络扫描工具
 - [rustscan](https://github.com/RustScan/RustScan): Scans all 65k ports in 3 seconds.
 - [Metasploit](https://github.com/rapid7/metasploit-framework)
 - [Tiger](https://www.nongnu.org/tiger/): The Unix security audit and intrusion detection tool
+
+### IPS/IDS
+
+IDS（Intrusion Detection System，入侵检测系统）和 IPS（Intrusion Prevention System，入侵防御系统）本质上都属于网络安全里的检测/防护设备，区别核心在于：IDS 发现攻击，但通常不主动拦截。IPS 发现攻击，并且可以主动阻断。
+
+- [fail2ban](https://github.com/fail2ban/fail2ban): 监控系统日志并自动封禁表现出恶意行为的主机 IP。它通过分析登录失败等日志模式，动态更新防火墙规则，以抵御暴力破解和其他自动化攻击。
+- [CrowdSec](https://github.com/crowdsecurity/crowdsec): security solution offering crowdsourced protection against malicious IPs and access to the most advanced real-world CTI.
+
+### 网络威胁情报 CTI
+
+- https://threathive.net/ : ThreatHive aggregates trusted open-source feeds and real-world honeypot data to produce a high-confidence blocklist.
+- https://www.abuseipdb.com/
+- https://www.spamhaus.org/blocklists/
+  - https://www.spamhaus.org/blocklists/spamhaus-blocklist/
+  - https://www.spamhaus.org/blocklists/do-not-route-or-peer/
 
 ### 蜜罐 Honeypot
 
@@ -1006,6 +1030,7 @@ Read the [NOTICE][] file distributed with this work for additional information r
   - https://resend.com/ : 备选方案
 - http://mailchimp.com/ : 搭建邮件&发邮件的服务 `ⱳ`
 - [nodemailer](https://github.com/nodemailer/nodemailer): 邮件类库 (NodeJS)
+- https://ethereal.email/ : 伪 SMTP 服务，用于测试邮件发送
 - https://mail.tm/ : 临时邮件账号，注销很方便。记录临时账号的密码可以下次登录。
 - [docker-mailserver](https://github.com/docker-mailserver/docker-mailserver): 运行在容器内的邮件服务器，无需数据库。
 
@@ -1099,6 +1124,7 @@ Read the [NOTICE][] file distributed with this work for additional information r
 
 - [CyberChef](https://gchq.github.io/CyberChef/): 开源的，在线提供编码/解码，压缩，数据分析，时间戳，代码格式化等功能。
 - https://it-tools.tech/ : 开源的，可以用 Docker 自部署。
+  - https://github.com/sharevb/it-tools : 原仓库维护太慢，这个 Fork 比较好
 - https://extendsclass.com/ : 有语法校验器，加/解密，格式转换，Diff 工具，各种生成器，前端压缩等工具。
 - https://cloudconvert.com/ : 在线服务，万能的格式转换器
   - https://convertio.co/ : 备用服务
@@ -1191,7 +1217,7 @@ Read the [NOTICE][] file distributed with this work for additional information r
 - [proxy_pool](https://github.com/jhao104/proxy_pool)
 - https://proxy.mimvp.com/
 
-## HTTP 静态文件服务
+## 静态文件服务
 
 - [static-web-server](https://github.com/static-web-server/static-web-server): Rust 写的。[Docker Alpine 镜像](https://hub.docker.com/r/joseluisq/static-web-server)大小 3 MB。
 - [caddy](https://github.com/caddyserver/caddy): Go 写的。[Docker Alpine 镜像](https://hub.docker.com/_/caddy)大小 16 MB。
@@ -1674,11 +1700,15 @@ Read the [NOTICE][] file distributed with this work for additional information r
 - [ncftp](https://www.ncftp.com/ncftp/): ftp 命令行客户端，macos、linux 平台通用。缺点是不支持 ftp over ssl。
   - [lftp](https://lftp.yar.ru): macos、linux 平台通用。支持 ftp over TLS or OpenSSL。缺点是没有 lls 这样的指令。只能用 `!`。
 - [Transmit](https://panic.com/transmit/): FTP/SFTP/WebDAV/S3/Backblaze B2/Box/Google Drive/DreamObjects/Dropbox/Microsoft Azure/Rackspace Cloud Files 客户端 APP。 `Ⓜ`
-- [Transfer](https://www.intuitibits.com/products/transfer/): 简单好用的 TFTP/HTTP/FTP/SFTP 服务器 `Ⓜ`
+- [sftpgo](https://github.com/drakkan/sftpgo): Full-featured and highly configurable SFTP, HTTP/S, FTP/S and WebDAV server
 - [WinSCP](https://winscp.net/): 免费开源的 FTP GUI 客户端。也支持 SCP、WebDAV、S3。支持中文文件名。`ⓦ`
 - [muCommander](https://www.mucommander.com/): 开源、跨平台的 FTP GUI 客户端。支持 FTP, SFTP, SMB, NFS, HTTP, Amazon S3, Hadoop HDFS, Bonjour。缺点：中文文件名会显示乱码。
 
-## RSS
+## 资讯/信息
+
+- [TrendRadar](https://github.com/sansan0/TrendRadar): 用 AI 筛选聚合资讯的平台
+
+### RSS
 
 - [RSSHub](https://github.com/DIYgod/RSSHub): 从任何内容生成 RSS/Atom/JSON 订阅源。定制转换路由需要自己写 JS 代码，略麻烦。
 - [RSSHub-Radar](https://github.com/DIYgod/RSSHub-Radar): 浏览器插件，用于查询 RSS 或 RSSHub 订阅

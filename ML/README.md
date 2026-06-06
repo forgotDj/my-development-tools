@@ -18,6 +18,8 @@
 - [可视化](#可视化)
 - [Chat](#chat)
     - [Chat in Terminal 终端](#chat-in-terminal-终端)
+- [AI Agent](#ai-agent)
+- [AI harness](#ai-harness)
 - [MCP 客户端](#mcp-客户端)
 - [MCP 服务端](#mcp-服务端)
 - [Diffusion 模型](#diffusion-模型)
@@ -117,6 +119,17 @@ text-to-image 社区
 
 - [mods](https://github.com/charmbracelet/mods): 支持 MCP
   - [tmuxai](https://github.com/alvinunreal/tmuxai): Chat LLM in Tmux。不支持 MCP
+
+## AI Agent
+
+- [hermes agent](https://github.com/nousresearch/hermes-agent): 自学习的 AI 机器人
+- [openclaw](https://github.com/openclaw/openclaw): AI 全自动化工具
+  - [ClawHub](https://clawhub.ai/): openclaw 的技能库
+  - [awesome-openclaw-skills](https://github.com/VoltAgent/awesome-openclaw-skills)
+
+## AI harness
+
+- [rtk](https://github.com/rtk-ai/rtk): 缩短命令行返回结果，从而减少 token 消耗
 
 ## MCP 客户端
 

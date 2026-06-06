@@ -21,6 +21,8 @@
   - [blackbox](https://github.com/StackExchange/blackbox): 备选方案。支持 Git/Mercurial/Subversion。缺点跟 git-secret 一样，得一个个文件添加。
 - [forgit](https://github.com/wfxr/forgit): 基于 fzf 和 shellscript 实现的 git 增强插件
 - https://download-directory.github.io/ : 下载 github 仓库里的某个目录。[源码](https://github.com/download-directory/download-directory.github.io)
+- [gitignore.io](https://github.com/toptal/gitignore.io): 快速生成 .gitignore 文件
+- [artifact-fs](https://github.com/cloudflare/artifact-fs): FUSE 文件系统挂载 git 项目，用于懒加载巨大容量的 git 项目。
 
 ## Git 仓库
 

@@ -193,8 +193,7 @@
   - [btop](https://github.com/aristocratos/btop): 用户体验很不错的 top 工具
   - [atop](https://www.atoptool.nl/index.php)
   - [bottom](https://github.com/clementtsang/bottom): 跨平台。Rust 实现。可缩放历史曲线，但不支持水平滚动。
-  - [glances](https://github.com/nicolargo/glances): 支持网页访问。Python 实现。
-  - [sampler](https://github.com/sqshq/sampler): 用 YAML 配置的终端面板。可执行 shell 命令，并且可视化输出。
+  - [glances](https://github.com/nicolargo/glances): 支持网页访问。支持 MCP Server，支持导出数据给其他服务（比如 Prometheus)。Python 实现。
 - better `kill`
   - [thefuck](https://github.com/nvbn/thefuck): 命令 typo 纠错
   - [fkill-cli](https://github.com/sindresorhus/fkill-cli): 灵活的删进程命令，例如 `fkill 1337 safari :8080`，如果不加参数，则是交互式命令。

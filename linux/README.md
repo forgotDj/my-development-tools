@@ -111,6 +111,8 @@
 - [pcp](https://github.com/performancecopilot/pcp): Performance Co-Pilot。系统性能监控
 - [uptime-kuma](https://github.com/louislam/uptime-kuma): 功能强大的可用性监控服务。
 - 终端工具请看 [Builtin Command Alternatives 的 better `top` 部分](./CLI/README.md#builtin-command-alternatives)
+- [glances](https://github.com/nicolargo/glances): 支持网页访问。支持 MCP Server，支持导出数据给其他服务（比如 Prometheus)。Python 实现。
+  - [sampler](https://github.com/sqshq/sampler): 用 YAML 配置的终端面板。可执行 shell 命令，并且可视化输出。
 
 ### agent
 

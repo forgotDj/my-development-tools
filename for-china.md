@@ -24,16 +24,17 @@
 
 ## 翻墙
 
+- https://siteproxy.ai/ : 免费在线网页代理。应急用，安全隐患后果自负。
 - https://github.com/bannedbook/fanqiang/wiki
 - [kcp](https://github.com/skywind3000/kcp):  A Fast and Reliable ARQ Protocol
-- [Proxifier](https://www.proxifier.com/): 改变指定应用的网络流量，在应用外设置网络代理，转发到 socks 或 http 代理上。还附带流量监控。`ⓦ` `Ⓜ`
-- [proxychains-ng](https://github.com/rofl0r/proxychains-ng): http 代理
+- [ProxyBridge](https://github.com/InterceptSuite/ProxyBridge): Proxifier Alternative to redirect any Windows/MacOS/Linux TCP and UDP traffic to HTTP/Socks5 proxy
+  - [Proxifier](https://www.proxifier.com/): 改变指定应用的网络流量，在应用外设置网络代理，转发到 socks 或 http 代理上。还附带流量监控。`ⓦ` `Ⓜ`
+  - [proxychains-ng](https://github.com/rofl0r/proxychains-ng): http 代理
 
 ### 客户端
 
 - ~~[shadowsocks](https://github.com/shadowsocks/shadowsocks)~~: shadowsocks，很好的工具，可惜已沦陷，不建议使用。
-- [V2Ray](https://github.com/v2ray/v2ray-core): V2Ray 是一个模块化的代理软件包，它的目标是提供常用的代理软件模块，简化网络代理软件的开发。强烈推荐。
-  - [V2RayX](https://github.com/Cenmrev/V2RayX): MacOS 客户端
+- [V2Ray](https://github.com/v2fly/v2ray-core): V2Ray 是一个模块化的代理软件包，它的目标是提供常用的代理软件模块，简化网络代理软件的开发。强烈推荐。
   - [V2RayNG](https://github.com/2dust/v2rayNG): Android 客户端
 - ~~[Clash](https://github.com/Dreamacro/clash): A rule-based tunnel in Go.~~ 作者已删库跑路。**注意不要信任所有自称 Clash 官网的网站**
 - [Clash Meta](https://github.com/MetaCubeX/mihomo): Clash Meta 是基于原 Clash 核心的重写项目，支持 Clash Premium 核心的大部分功能。这是命令行程序，不是 APP。作者很有幽默感，切换到 Meta 分支看源码。

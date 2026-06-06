@@ -13,11 +13,13 @@
 - [IP](#ip)
     - [IP 归属地 (GeoIP)](#ip-归属地-geoip)
 - [DNS](#dns)
-- [ADblock/ADGuard](#adblockadguard)
+- [反广告](#反广告)
     - [公共 DNS](#公共-dns)
+- [反向代理](#反向代理)
 - [HTTP 服务](#http-服务)
 - [Websocket](#websocket)
 - [抓包、流量分析](#抓包流量分析)
+- [流量监控](#流量监控)
 - [API Gateway](#api-gateway)
 - [隧道 Tunnel](#隧道-tunnel)
 - [Network Benchmark](#network-benchmark)
@@ -34,6 +36,7 @@
 - https://tool.chinaz.com/ : 网站网络状态排查工具 (国内)
 - https://check-host.net/ : 网站网络状态排查工具 (国外)
 - Linux 命令: `ping`, `nc`, `mtr`, `netstat`, `nettop`, `iftop`
+- [hostctl](https://github.com/guumaster/hostctl): This tool gives you more control over the use of your hosts file. You can have multiple profiles and switch them on/off as you need.
 
 ## 网站质量监测 (BOCE)
 
@@ -68,6 +71,7 @@
 ## 防火墙
 
 - [OpenSnitch](https://github.com/evilsocket/opensnitch): Linux 应用防火墙
+  - [ostui](https://github.com/xlfe/ostui): TUI for OpenSnitch
 
 ## IP
 
@@ -102,19 +106,20 @@
 - [dnspyre](https://github.com/Tantalor93/dnspyre): DNS 压测工具
   - [dnsperf](https://github.com/DNS-OARC/dnsperf): 备选方案
 
-## ADblock/ADGuard
+## 反广告
 
 - [AdBlock](http://getadblock.com/): 闭源的。广告屏蔽插件。AdBlock 会和知乎首页起冲突。支持过滤统计。
+- [ADGuard Home](https://github.com/AdguardTeam/AdGuardHome): 反广告和跟踪的 DNS 服务器。交互设计很棒，功能强大。可自定义规则。
+  - [SmartDNS](https://github.com/pymumu/smartdns)
+  - [Pi-hole](https://pi-hole.net/)
+- 反广告规则
+  - [AdBlock-Acceleration](https://github.com/Silentely/AdBlock-Acceleration): 提供各大规则项目的国内加速链接
   - https://easylist.to/ : EasyList 规则列表
   - https://github.com/easylist/easylist
   - https://easylist-downloads.adblockplus.org/easylistchina+easylist.txt : 过滤规则文件。包含国内外网站过滤规则，最全。
   - https://easylist-downloads.adblockplus.org/easylistchina.txt : 过滤规则文件。这个只包含国内网站过滤规则，国外网站规则没在内。
-- [ADGuard Home](https://github.com/AdguardTeam/AdGuardHome): 反广告和跟踪的 DNS 服务器。交互设计很棒，功能强大。可自定义规则。
-  - [SmartDNS](https://github.com/pymumu/smartdns)
-  - [Pi-hole](https://pi-hole.net/)
-- [AdBlock-Acceleration](https://github.com/Silentely/AdBlock-Acceleration): 提供各大规则项目的国内加速链接
-
-分流规则请看 [../network/README.md](../network/README.md)。
+  - [anti-AD](https://github.com/privacy-protection-tools/anti-AD): 致力于成为中文区命中率最高的广告过滤列表，实现精确的广告屏蔽和隐私保护。
+- 分流规则请看 [中国特色-翻墙-翻墙规则](../for-china.md#翻墙规则)。
 
 ### 公共 DNS
 
@@ -131,6 +136,14 @@
 - [encrypted-dns](https://github.com/paulmillr/encrypted-dns): DNS over HTTPS config profiles for iOS & macOS
 <!-- - https://v.recipes/dns/ 不要宣传，以免大家都用不了 -->
 
+## 反向代理
+
+- [Traefik](https://github.com/containous/traefik): 类似 Nginx。现代化 HTTP 反向代理服务器
+- [Caddy](https://github.com/caddyserver/caddy): HTTP/1-2-3 web server with automatic HTTPS。
+  - [caddy-l4](https://github.com/mholt/caddy-l4): Layer 4 (TCP/UDP) app for Caddy
+- [Envoy](https://github.com/envoyproxy/envoy): high-performance edge/middle/service proxy
+- [HAProxy](https://github.com/haproxy/haproxy): reverse-proxy offering high availability, load balancing, and proxying for TCP and HTTP-based applications.
+
 ## HTTP 服务
 
 - [一行代码运行 HTTP 服务](https://gist.github.com/willurd/5720255)
@@ -138,7 +151,6 @@
 - [http-server](https://github.com/indexzero/http-server): 快速搭建 HTTP 服务器
   - [serve](https://github.com/zeit/serve): alternative
 - [Varnish](https://github.com/varnishcache/varnish-cache): HTTP 内容缓存服务器
-- [Traefik](https://github.com/containous/traefik): 类似 Nginx。现代化 HTTP 反向代理服务器
 - [h2o](https://github.com/h2o/h2o): the optimized HTTP/1, HTTP/2, HTTP/3 server
 
 ## Websocket
@@ -154,9 +166,15 @@
 - [mitmproxy](https://mitmproxy.org/): 命令行版抓包工具。4 种模式，3 种命令行 mitmproxy/mitmdump/mitmweb。mitmweb 提供 web 服务端。
 - [whistle](https://github.com/avwo/whistle): 用 NodeJS 实现的跨平台 HTTP, HTTPS, WebSocket 调试工具
   - [iProxy](https://github.com/xcodebuild/iProxy): 备选方案
+
+## 流量监控
+
+- iftop: 按远端地址分类来实时监控网络流量
 - [nethogs](https://github.com/raboof/nethogs): 按进程实时监控网络流量
-- [sniffer](https://github.com/chenjiandongx/sniffer): 按进程和链接实时监控网络流量
+- [bandwhich](https://github.com/imsnif/bandwhich): 终端工具，根据进程、远端地址、链接分类来实时监控网络流量。
+  - [sniffer](https://github.com/chenjiandongx/sniffer): 备用方案
 - [Proxyman](https://proxyman.io/): 功能超强的 HTTP 抓包和 Mock 工具
+- [iptraf-ng](https://github.com/iptraf-ng/iptraf-ng): a console-based network monitoring program for Linux that displays information about IP traffic.
 
 ## API Gateway
 
