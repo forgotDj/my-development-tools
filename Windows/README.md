@@ -29,6 +29,7 @@
 - [Microsoft-Activation-Scripts](https://github.com/massgravel/Microsoft-Activation-Scripts): Windows 与 Office 激活工具。支持 Ohook (离线永久激活) 与 KMS (在线激活到 2038 年)。
 - [sysinternals](https://learn.microsoft.com/en-us/sysinternals/): Windows 系统工具。ProcDump, Process Monitor 很有用。
 - [ImageGlass](https://imageglass.org/): 开源的图片浏览器。如果用 Microsoft Store 安装，选免费试用版，功能没限制的。
+- [DeskFrame](https://github.com/PinchToDebug/DeskFrame): 桌面图标整理
 
 ## 监控
 

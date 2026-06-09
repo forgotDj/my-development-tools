@@ -66,7 +66,8 @@
 - better `traceroute`
   - `mtr`
   - [NextTrace](https://github.com/nxtrace/NTrace-core): trace 命令行工具，可显示地理位置信息
-- [snitch](https://github.com/karol-broda/snitch): a friendlier `ss`/`netstat` for humans. inspect network connections with a clean tui or styled tables.
+- [rustnet](https://github.com/domcyrus/rustnet): 进程级网络监控终端，跨平台，支持 eBPF。
+  - [snitch](https://github.com/karol-broda/snitch): 「备选方案」a friendlier `ss`/`netstat` for humans. inspect network connections with a clean tui or styled tables.
 
 ## 防火墙
 
